@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--ConstraintLayout约束布局的含义:
+根据布局中的其他元素或视图, 确定View在屏幕中的位置, 受到三类约束,
+ 即其他视图, 父容器(parent), 基准线(Guideline).
+
+layout_constraint[本源位置]_[目标位置]="[目标ID]"-->
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,6 +12,21 @@
     android:layout_height="match_parent"
     tools:context="com.xfc.fgzs.xfcproject.XFCMainActivity">
 
+    <!--
+    android:width 的值，一般是 “100dp” 这样的数值;
+  android:layout_width 的值，一般是”fill_parent”,”wrap_content”,”match_parent”.当然，它也可以像前者一样，设置数值的.
+带”layout”的属性是指整个控件而言的，是与父控件之间的关系，如 layout_gravity 在父控件中的对齐方式, layout_margin 是级别相同的控件之间的间隙等等；
+不带”layout” 的属性是指控件中文本的格式，如gravity是指文本的对齐方式等等，而其中文本的格式又受制约于它的控件在父控件中的属性.
+
+1）fill_parent
+设置一个构件的布局为fill_parent将强制性地使构件扩展，以填充布局单元内尽可能多的空间。这跟Windows控件的dockstyle属性大体一致。设置一个顶部布局或控件为fill_parent将强制性让它布满整个屏幕。
+2） wrap_content
+设置一个视图的尺寸为wrap_content将强制性地使视图扩展以显示全部内容。以TextView和ImageView控件为例，设置为wrap_content将完整显示其内部的文本和图像。布局元素将根据内容更改大小。设置一个视图的尺寸为wrap_content大体等同于设置Windows控件的Autosize属性为True。
+3）match_parent
+   Android2.2中match_parent和fill_parent是一个意思 .两个参数意思一样，match_parent更贴切，于是从2.2开始两个词都可以用。那么如果考虑低版本的使用情况你就需要用fill_parent了
+
+fill_parent，match_parent两个参数意思一样，只是某大仙觉得match_parent更贴切，于是从2.2开始你两个词都可以用。那么如果考虑低版本的使用情况你就需要用fill_parent了。
+-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
