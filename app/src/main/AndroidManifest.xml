@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xfc.fgzs.xfcproject" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <!--设置默认Activity的方式是在AndroidManifest.xml中为Activity添加intent-filter，
+        并将action设置为android.intent.action.MAIN，category设置为android.intent.category.LAUNCHE。-->
+        <activity android:name=".XFCMainActivity" > <!--  android:icon:用安装后在桌面上显示的图标-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />  <!-- 决定应用程序最先启动的Activity -->
+
+                <category android:name="android.intent.category.LAUNCHER" /><!-- 定应用程序是否显示在程序列表里-->
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
